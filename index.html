@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>BOLT Breath Awareness</title>
+    <title>BOLT Breath Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,20 +13,21 @@
             <p>Choose your language / भाषा चुनें</p>
             <button onclick="setLang('en')">English</button>
             <button onclick="setLang('hi')">हिंदी</button>
-            <div class="footer">Coach Tool</div>
         </div>
 
         <div id="welcome" class="hidden">
             <h1 id="wTitle"></h1>
-            <p id="w1"></p>
-            <p id="w2"></p>
-            <button id="wBtn" onclick="goInstructions()"></button>
+            <div id="wBody" style="text-align: left; margin-bottom: 20px;">
+                <p id="wText1"></p>
+                <p id="wText2"></p>
+            </div>
+            <button onclick="goInstructions()" id="wBtn"></button>
         </div>
 
         <div id="instructions" class="hidden">
             <h2 id="iTitle"></h2>
             <div id="iText" class="box"></div>
-            <button id="iBtn" onclick="goTimer()"></button>
+            <button onclick="goTimer()" id="iBtn"></button>
         </div>
 
         <div id="timerScreen" class="hidden">
@@ -39,18 +39,14 @@
         </div>
 
         <div id="result" class="hidden">
-            <h2 id="rTitle"></h2>
-            <div class="box">
-                <p id="rExplain"></p>
-                <p><b>Suggestion:</b> <span id="rSuggest"></span></p>
-            </div>
-            <div id="rTable" class="box"></div>
-            <div id="rBenefits" class="box"></div>
+            <div id="rTitle"></div>
+            <div id="rExplain"></div>
+            <div id="rTable"></div>
+            <div id="rBenefits"></div>
             <p id="rDisc" class="footer"></p>
             <button id="rBtn" onclick="restart()"></button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
